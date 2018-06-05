@@ -1,0 +1,15 @@
+{
+  "name": "hey",
+  "version": "0.1.0",
+  "description": "Get an alert when this boring command is finished",
+  "main": "hey.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Axel DENEU",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "node-notifier": "^5.2.1"
+  }
+}
