@@ -1,5 +1,5 @@
 {
-  "name": "hey",
+  "name": "@adeneu/hey",
   "version": "0.1.0",
   "description": "Get an alert when this boring command is finished",
   "main": "hey.js",
