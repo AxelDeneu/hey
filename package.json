@@ -1,6 +1,6 @@
 {
   "name": "@adeneu/hey",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Get an alert when this boring command is finished",
   "main": "hey.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "preferGlobal": true,
   "author": "Axel DENEU",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "node-notifier": "^5.2.1"
   }
