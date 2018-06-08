@@ -1,6 +1,6 @@
 {
   "name": "@adeneu/hey",
-  "version": "0.1.3",
+  "version": "0.1.3d",
   "description": "Get an alert when this boring command is finished",
   "main": "hey.js",
   "scripts": {
