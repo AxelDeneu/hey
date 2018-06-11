@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <style>
-    	html, body {
-    		height: 100%;
-    	}
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  </head>
-  <body class="has-background-dark has-text-light">
-  <section class="section has-text-light">
-    <div class="container has-text-light">
-      <h1 class="title has-text-light">
-        Hello World
-      </h1>
-      <p class="subtitle has-text-light">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-  </section>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hey!</title>
+	<style>
+	html, body {
+		height: 100%;
+	}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body class="has-background-dark has-text-light">
+	<section class="section has-background-dark has-text-light">
+		<div class="container has-text-light">
+			<h1 class="title has-text-light">
+				Here is all of your completed "Hey!" processes<a class="button is-info is-pulled-right" href="/about">About</a>
+			</h1>
+			{% for cmd in data %}
+			<div class="box has-background-light">
+				<article class="media">
+					<div class="media-content">
+						<div class="content">
+							<div class="columns">
+								<div class="colum">
+									<h2>'{{ cmd.start[0].cmd }}'</h2>
+								</div>
+							</div>
+							<div class="columns">
+								<div class="column is-four-fifths">
+									<span class="has-text-info"><strong>Start : </strong><i class="far fa-clock"></i>&nbsp;{{ cmd.start[0].time|date("M d, Y H:i:s") }}</span><br>
+									{% if cmd.exit[0].time %}
+									<span class="has-text-info"><strong>End : </strong><i class="far fa-clock"></i>&nbsp;{{ cmd.exit[0].time|date("M d, Y H:i:s") }}</span><br>
+									{% else %}
+									<span class="has-text-warning"><strong>End : </strong><i class="far fa-clock"></i>&nbsp;Pending...</span><br>
+									{% endif %}
+								</div>
+								<div class="column">
+									<a class="button is-dark is-pulled-right" href="/process/{{cmd.start[0].identifier}}">Show logs</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+</body>
 </html>

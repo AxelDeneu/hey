@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hey!</title>
+	<style>
+	html, body {
+		height: 100%;
+	}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body class="has-background-dark has-text-light">
+	<section class="section has-background-dark has-text-light">
+		<div class="container has-text-light">
+			<h1 class="title has-text-light">
+				Here is the details of the process '<strong>{{data.start[0].cmd}}</strong>'
+			</h1>
+			<div class="box has-background-light">
+				<article class="media">
+					<div class="media-content">
+						<div class="content">
+							{% if data.data %}
+							{% for val in data.data %}
+								{{nl2br(val.text)}}
+							{% endfor %}
+							{% else %}
+							Whoops! It seems that this process doesn't have any output at the moment...
+							{% endif %}
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="columns">
+				<div class="column">
+					<a class="button is-light" href="/">Back</a>
+				</div>
+				<div class="column">
+					{% if data.exit[0].time %}
+					<h4 class="has-text-success is-pulled-right"><i class="far fa-clock"></i>&nbsp;This process ended at {{data.exit[0].time|date("M d, Y H:i:s")}}</h4>
+					{% else %}
+					<h4 class="has-text-warning is-pulled-right"><i class="far fa-clock"></i>&nbsp;This process does not ended</h4>
+					{% endif %}
+				</div>
+		</div>
+	</section>
+</body>
+</html>
