@@ -7,12 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-	"hey": "./bin/hey.js"
+    "hey": "./bin/hey.js"
   },
   "preferGlobal": true,
   "author": "Axel DENEU",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.16.3",
+    "nedb": "^1.8.0",
     "node-notifier": "^5.2.1"
   }
 }
