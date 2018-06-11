@@ -1,6 +1,7 @@
 # Hey!
 
-Get a notification when this boring command is done! (yes, "hey!" is the name of my package, don't blame me...)
+Get a notification when this boring command is done! (yes, "hey!" is the name of my package, don't blame me...).
+If you're having some issues with my tool or if you want to add somes features, open an issue ;)
 
 ## Getting Started
 
