@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 
 var hey = require('../lib/index.js');
+const exec = require('child_process').exec;
 
 let args = process.argv.slice(2);
 
 if(args.length > 0) {
 	if(args[0] == "web") {
-		hey.ho('node ' + __dirname + '/../app/web.js');
+		let spawnCmd = exec('node '+__dirname+'/../app/web.js', {
+			encoding: 'UTF-8'
+		});
 	} else {
 		let cmd = args.join(' ');
 		hey.ho(cmd);
