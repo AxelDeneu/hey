@@ -1,18 +1,24 @@
 {
   "name": "@adeneu/hey",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Get an alert when this boring command is finished",
   "main": "hey.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-	"hey": "./bin/hey.js"
+    "hey": "./bin/hey.js"
   },
   "preferGlobal": true,
   "author": "Axel DENEU",
   "license": "MIT",
   "dependencies": {
-    "node-notifier": "^5.2.1"
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "nedb": "^1.8.0",
+    "nl2br": "0.0.3",
+    "node-notifier": "^5.2.1",
+    "twig": "^1.11.1",
+    "uuid": "^3.2.1"
   }
 }
